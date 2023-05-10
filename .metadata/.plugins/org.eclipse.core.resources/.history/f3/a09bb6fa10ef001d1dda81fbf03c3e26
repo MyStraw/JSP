@@ -11,8 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/myservlet05")
 
-public class MyServlet05 extends HttpServlet { //읽어서 걍 보내는게 아파치, 읽어서 뭔갈 조작하고 write 하는게 톰캣.
-												//white 가 out
+public class MyServlet05 extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
