@@ -21,7 +21,7 @@ public class MyServlet05 extends HttpServlet { //읽어서 걍 보내는게 아�
 		PrintWriter out = resp.getWriter();
 		out.println("<table border=\"1\">"); 
 		out.println("<tr>");	
-		out.println("<td>번호</td><td>나라</td><td>수도</td><td>인구</td>");
+		out.println("<td>번호</td><td>나라</td><td>수도</td><td>인구</td>");  
 		out.println("</tr>");		
 		out.println("<tr>");	
 		out.println("<td>1</td><td>대한민국</td><td>서울</td><td>1000만</td>");
