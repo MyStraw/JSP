@@ -34,7 +34,6 @@
 		out.print(String.format("Key: %s, 이름 : %s<br/>", key, s));
 			}
 		}
-
 		else {
 			out.print(String.format("Key: %s, Value : %s<br/>", key, object));
 		}
