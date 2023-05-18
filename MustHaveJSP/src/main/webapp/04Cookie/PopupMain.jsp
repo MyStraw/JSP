@@ -46,24 +46,23 @@ div#popup>div {
 	$(function() {
 		$('#closeBtn').click(function() {
 			$('#popup').hide();
-			var chkVal = $("input:checkbox[id=inactiveToday]:checked").val();
-
-			console.log('check', chkVal);
-			
-
-			$.ajax({
-				url : './PopupCookie.jsp',
-				type : 'get',
-				data : {inactiveToday : chkVal},
-				dataType : "text",
-				success : function(resData) {
-					if (resData != '')
-						location.reload();
-				}
-			});
-			
+			//var chkVal = $("input:checkbox[id=inactiveToday]:checked").val();
+			var chkVal = $("inactiveToday:checked").val();
+			if (chkVal != undefined) { //이거 한줄 없어저 무조건 누르면 리로드 되게. 새로 로딩. 무조건 새로 popup.
+				$.ajax({
+					url : './PopupCookie.jsp',
+					type : 'get',
+					data : {
+						inactiveToday : chkVal
+					},
+					dataType : "text",
+					success : function(resData) {
+						if (resData != '')
+							location.reload();
+					}
+				});
+			}
 		});
-
 	});
 </script>
 </head>
