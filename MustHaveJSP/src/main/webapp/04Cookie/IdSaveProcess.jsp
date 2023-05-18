@@ -13,7 +13,7 @@ if ("must".equals(user_id) && "1234".equals(user_pw)) {
 	if (save_check != null && save_check.equals("Y")) {
 		CookieManager.makeCookie(response, "loginId", user_id, 86400);
 	} else {
-		CookieManager.deleteCookie(response, "loginId");
+		CookieManager.deleteCookie(response, "loginId"); //쿠키를 만드는것도, 삭제하는것도 다 같은거니 중복이 될거니 따로 클래스로 뺐다. 이게 효율적.보수관리도.
 	}
 
 	JSFunction.alertLocation("로그인에 성공했습니다.", "IdSaveMain.jsp", out);
@@ -22,6 +22,6 @@ if ("must".equals(user_id) && "1234".equals(user_pw)) {
 else {
 
 	JSFunction.alertBack("로그인에 실패했습니다.", out);
-}
+} 
 %>
 

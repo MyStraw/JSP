@@ -13,25 +13,25 @@ public class CookieManager {
 		response.addCookie(cookie);
 	}
 
-	public static String readCookie(HttpServletRequest request, String cName) { 
-		String cookieValue="";
-	
-	Cookie[]cookies = request.getCookies();
-	if (cookies !=null) {
-		for (Cookie c : cookies) {
-			String cookieName = c.getName();
-			if (cookieName.equals(cName)) {
-				cookieValue = c.getValue();
+	public static String readCookie(HttpServletRequest request, String cName) {
+		String cookieValue = "";
+
+		Cookie[] cookies = request.getCookies();
+		if (cookies != null) {
+			for (Cookie c : cookies) {
+				String cookieName = c.getName();
+				if (cookieName.equals(cName)) {
+					cookieValue = c.getValue();
+				}
 			}
 		}
-	}
-	return cookieValue;
+		return cookieValue;
 
-}
+	}
 
 	public static void deleteCookie(HttpServletResponse response, String cName) {
-		makeCookie(response, cName, "", 0);
+		makeCookie(response, cName, "", 0); //time이 0이되면 쿠키가 삭제된다. 왜 삭제메소드에 메이크를 호출하는지.
 
-}
+	}
 
 }
