@@ -5,12 +5,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Timestamp;
 
 public class JDBConnect {
 
 	public static void main(String[] args) {
 		JDBConnect jdbconnect = new JDBConnect();
-		
+
 	}
 
 	public Connection con;
