@@ -13,7 +13,7 @@ public class JDBConnect2 {
 		JDBConnect2 jdbconnect = new JDBConnect2();
 		jdbconnect.showTable();
 		//jdbconnect.showTablePrepared();
-		jdbconnect.close();
+		jdbconnect.showTable();
 		
 //		String driver = "com.mysql.cj.jdbc.Driver";
 //		String url = "jdbc:mysql://localhost:3306/musthave";
@@ -22,10 +22,7 @@ public class JDBConnect2 {
 //		
 //		JDBConnect jdbconnect = new JDBConnect(driver, url, id, pwd);
 //		jdbconnect.showTable();
-//		jdbconnect.close();
-		
-		
-		
+//		jdbconnect.close();	
 		
 		
 	}
@@ -73,7 +70,6 @@ public class JDBConnect2 {
 				psmt.close();
 			if (con != null)
 				con.close();
-
 			System.out.println("JDBC 자원 해제");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -103,8 +99,8 @@ public class JDBConnect2 {
 	
 	public void showTablePrepared() {
 		try {
-			String query = "SELECT * FROM board";
-			psmt = con.prepareStatement(query);
+			String qr = "select * from board";
+			psmt = con.prepareStatement(qr);
 			rs = psmt.executeQuery();
 
 			while(rs.next()){
