@@ -54,6 +54,9 @@
   <param-value>tiger</param-value>
   </context-param>
   
+  <session-config>
+  <session-timeout>20</session-timeout>
+  </session-config> <!-- 06-SessionMain 가서 확인! -->
   
   
   

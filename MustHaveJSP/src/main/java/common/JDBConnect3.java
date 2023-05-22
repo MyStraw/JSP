@@ -112,7 +112,7 @@ public class JDBConnect3 {
 	}
 
 	public static void main(String[] args) throws Exception {
-		JDBCConnect jdbcConnect = new JDBCConnect();
+		JDBCConnect2 jdbcConnect = new JDBCConnect2();
 		Connection con = jdbcConnect.getConnection();
 		jdbcConnect.printBoard(con);
 		con.close();
