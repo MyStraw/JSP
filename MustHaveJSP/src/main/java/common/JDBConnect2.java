@@ -117,5 +117,4 @@ public class JDBConnect2 {
 			e.printStackTrace();
 		}
 	}
-
 }
