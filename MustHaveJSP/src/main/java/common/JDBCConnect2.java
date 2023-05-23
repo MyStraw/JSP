@@ -4,6 +4,7 @@ package common; //jsp로도 테이블을 빼내보자.
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -11,6 +12,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.jsp.JspWriter;
 
 public class JDBCConnect2 {
+//	public Connection con;
+//	public Statement stmt;
+//	public PreparedStatement psmt;
+//	public ResultSet rs;
 
 	private String driver;
 	private String url;
@@ -18,7 +23,6 @@ public class JDBCConnect2 {
 	private String pwd;
 
 	public JDBCConnect2() {
-
 		driver = "com.mysql.cj.jdbc.Driver";
 		url = "jdbc:mysql://localhost:3306/musthave";
 		id = "musthave";
@@ -36,15 +40,15 @@ public class JDBCConnect2 {
 		driver = app.getInitParameter("MySQLDriver");
 		url = app.getInitParameter("MySQLURL");
 		id = app.getInitParameter("MySQLId");
-		pwd = app.getInitParameter("MySQLPwd");	
-			
+		pwd = app.getInitParameter("MySQLPwd");
+
 	}
 
 	public Connection getConnection() {
 		try {
 			Class.forName(driver);
 			Connection con = DriverManager.getConnection(url, id, pwd);
-			
+
 			return con;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -152,14 +156,14 @@ public class JDBCConnect2 {
 //		con.close();
 //	}
 //
-//	public void printBoard(Connection con) throws Exception {
-//		Statement st = con.createStatement();
-//		ResultSet rs = st.executeQuery("select * from board");
-//		while (rs.next()) {
-//			System.out.println(String.format("%5d\t%s\t%s\t%8s\t%s\t%d\n", rs.getInt("num"), rs.getString("title"),
-//					rs.getString("content"), rs.getString("id"), rs.getTimestamp("postdate"), rs.getInt("visitcount")));
-//		}
-//		rs.close();
-//		st.close();
-//	}
+	public void printBoard(Connection con) throws Exception {
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery("select * from board");
+		while (rs.next()) {
+			System.out.println(String.format("%5d\t%s\t%s\t%8s\t%s\t%d\n", rs.getInt("num"), rs.getString("title"),
+					rs.getString("content"), rs.getString("id"), rs.getTimestamp("postdate"), rs.getInt("visitcount")));
+		}
+		rs.close();
+		st.close();
+	}
 }

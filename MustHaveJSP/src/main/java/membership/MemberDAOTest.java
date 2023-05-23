@@ -8,7 +8,7 @@ public class MemberDAOTest {
 
 	public static void printMemberDTO() {
 		// Test getMemberDTO()
-		MemberDTO memberDTO = memberDAO.getMemberDTO("test1", "1111");
+		MemberDTO memberDTO = memberDAO.getMemberDTO("dohave", "1234");
 		System.out.println(memberDTO);
 
 	}
@@ -45,7 +45,7 @@ public class MemberDAOTest {
 	// static 인스턴스 생성없이 호출가능.
 	public static void main(String[] args) {
 
-//		printMemberDTO();
+		printMemberDTO();
 //		printAllMemberDTO();
 //
 //		System.out.println("-".repeat(80));
@@ -54,9 +54,9 @@ public class MemberDAOTest {
 //		printAllMemberDTO();
 //		System.out.println("-".repeat(80));
 //		insertMemberObjectDTO();
-		deleteMemberDTO();
-		printAllMemberDTO();
-
+//		deleteMemberDTO();
+//		printAllMemberDTO();
+//
 	}
 
 }
