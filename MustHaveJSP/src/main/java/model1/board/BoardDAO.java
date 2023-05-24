@@ -126,18 +126,20 @@ public class BoardDAO extends JDBCConnect2 {
 	}
 
 	// 검색 조건에 맞는 게시물 목록을 반환합니다(페이징 기능 지원).
-	public List<BoardDTO> selectListPage(Map<String, Object> map) {
+	public List<BoardDTO> selectListPage(int from, int count) {
 		List<BoardDTO> bbs = new Vector<BoardDTO>(); // 결과(게시물 목록)를 담을 변수
-
+		//select from where limit from,count 10(10개 가져오기) ex) limit 0,10 ->1번부터 10개
+		//MySQL은 이거 한줄로 가능. 밑에 query 3줄은 오라클용.
 		// 쿼리문 템플릿
-		String query = " SELECT * FROM ( " + "    SELECT Tb.*, ROWNUM rNum FROM ( " + "        SELECT * FROM board ";
+		String query = "select * from board limit ?, ?";
+		//String query = " SELECT * FROM ( " + "    SELECT Tb.*, ROWNUM rNum FROM ( " + "        SELECT * FROM board ";
 
 		// 검색 조건 추가
-		if (map.get("searchWord") != null) {
-			query += " WHERE " + map.get("searchField") + " LIKE '%" + map.get("searchWord") + "%' ";
-		}
+	//	if (map.get("searchWord") != null) {
+	//		query += " WHERE " + map.get("searchField") + " LIKE '%" + map.get("searchWord") + "%' ";
+	//	}
 
-		query += "      ORDER BY num DESC " + "     ) Tb " + " ) " + " WHERE rNum BETWEEN ? AND ?";
+	//	query += "      ORDER BY num DESC " + "     ) Tb " + " ) " + " WHERE rNum BETWEEN ? AND ?";
 
 		Connection con = getConnection();
 		// 게시물 수를 얻어오는 쿼리문 작성	
@@ -153,8 +155,8 @@ public class BoardDAO extends JDBCConnect2 {
 		try {
 			// 쿼리문 완성
 			psmt = con.prepareStatement(query);
-			psmt.setString(1, map.get("start").toString());
-			psmt.setString(2, map.get("end").toString());
+			psmt.setInt(1, from);
+			psmt.setInt(2, count);
 
 			// 쿼리문 실행
 			rs = psmt.executeQuery();
