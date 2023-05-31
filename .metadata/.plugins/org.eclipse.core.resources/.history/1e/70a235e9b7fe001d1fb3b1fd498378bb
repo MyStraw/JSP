@@ -1,0 +1,63 @@
+package fileupload;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import common.JDBCConnect2;
+
+public class MyfileDAO extends JDBCConnect2 {
+
+	public int insertFile(MyfileDTO dto) {
+
+		int applyResult = 0;
+
+		String query = "insert into myfile(name, title, cate, ofile, sfile) values (?,?,?,?,?)";
+		Connection con = getConnection();
+
+		if (con == null) {
+			return 0;
+		}
+		PreparedStatement psmt = null;
+
+		try {
+
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, dto.getName());
+			psmt.setString(2, dto.getTitle());
+			psmt.setString(3, dto.getCate());
+			psmt.setString(4, dto.getOfile());
+			psmt.setString(5, dto.getSfile());
+
+			applyResult = psmt.executeUpdate();
+
+			con.close();
+
+		} catch (Exception e) {
+			System.out.println("INSERT 중 예외 발생");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (psmt != null)
+					psmt.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return applyResult;
+	}
+
+	public static void main(String[] args) {
+		MyfileDTO mydto = new MyfileDTO();
+
+		mydto.setName("Gil");
+		mydto.setTitle("nahaha");
+		mydto.setCate("human");
+		mydto.setOfile("ofile1");
+		mydto.setSfile("sfile1");
+
+		MyfileDAO mydao = new MyfileDAO();
+		mydao.insertFile(mydto);		
+		System.out.println(mydto);
+	}
+}
