@@ -64,7 +64,7 @@ public class MVCBoardDAO extends JDBCConnect2 {
 		
 		String query = "select * from mvcboard";
 		if (map.get("searchWord") !=null) {
-			query += " where " + map.get("searchField") + "Like '%" +  map.get("searchWord") + "%' ";}
+			query += " where " + map.get("searchField") + " Like '%" +  map.get("searchWord") + "%' ";}
 		
 		query += " order by idx desc limit ?,?";
 		//리미트는 시작과 페이지 사이즈로 한다. Mysql에서는. 오라클은 처음과 끝을 입력하는 대신.
