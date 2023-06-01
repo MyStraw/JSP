@@ -1,0 +1,14 @@
+127.0.0.1 - - [01/Jun/2023:00:08:36 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:08:37 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.jsp HTTP/1.1" 200 472
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:08:37 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:08:39 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.mvc?id=nakja&pass=1234 HTTP/1.1" 500 3549
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:08:53 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.mvc?id=stranger&pass=1234 HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:08:54 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.mvc?id=musthave&pass=1234 HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:08:57 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.mvc?id=nakja&pass=1234 HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:09:10 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.jsp HTTP/1.1" 200 472
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:09:15 +0900] "GET /MustHaveJSP/13Servlet/FrontController.jsp HTTP/1.1" 200 448
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:09:17 +0900] "GET /MustHaveJSP/13Servlet/regist.one HTTP/1.1" 404 847
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:09:18 +0900] "GET /MustHaveJSP/13Servlet/login.one HTTP/1.1" 404 846
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:09:20 +0900] "GET /MustHaveJSP/13Servlet/freeboard.one HTTP/1.1" 404 850
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:10:46 +0900] "GET /MustHaveJSP/13Servlet/MemberAuth.mvc HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [01/Jun/2023:00:10:57 +0900] "GET /MustHaveJSP/*.one HTTP/1.1" 404 828

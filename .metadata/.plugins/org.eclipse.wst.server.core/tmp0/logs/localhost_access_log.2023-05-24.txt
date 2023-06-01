@@ -1,0 +1,8 @@
+127.0.0.1 - - [24/May/2023:20:59:52 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [24/May/2023:20:59:53 +0900] "GET /MustHaveJSP/06Session/LoginForm.jsp HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [24/May/2023:20:59:53 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [24/May/2023:21:00:00 +0900] "POST /MustHaveJSP/06Session/LoginProcess.jsp HTTP/1.1" 500 3983
+0:0:0:0:0:0:0:1 - - [24/May/2023:21:00:36 +0900] "GET /MustHaveJSP/06Session/LoginForm.jsp HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [24/May/2023:21:00:46 +0900] "POST /MustHaveJSP/06Session/LoginProcess.jsp HTTP/1.1" 500 3983
+0:0:0:0:0:0:0:1 - - [24/May/2023:21:04:18 +0900] "GET /MustHaveJSP/06Session/LoginForm.jsp HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [24/May/2023:21:04:22 +0900] "POST /MustHaveJSP/06Session/LoginProcess.jsp HTTP/1.1" 500 3983
