@@ -1,4 +1,4 @@
-<%@ page import="utils.JSFunction"%>
+<%@ page import="utils.JSFunction_과거"%>
 <%@ page import="java.io.FileNotFoundException"%>
 <%@ page import="java.io.FileInputStream"%>
 <%@ page import="java.io.File"%>
@@ -50,9 +50,9 @@ try {
     outStream.close();
 }
 catch (FileNotFoundException e) {
-    JSFunction.alertBack("파일을 찾을 수 없습니다.", out);
+    JSFunction_과거.alertBack("파일을 찾을 수 없습니다.", out);
 }
 catch (Exception e) {
-    JSFunction.alertBack("예외가 발생하였습니다.", out);
+    JSFunction_과거.alertBack("예외가 발생하였습니다.", out);
 }
 %>
