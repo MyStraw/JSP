@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>dd</message>\r\n<message>\uC62C\uB9AC\uC7C8~</message>\r\n<message>Merge branch &apos;main&apos; of https\://github.com/MyStraw/JSP&\#x0A;</message>\r\n</messages>
+=======
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Merge branch &apos;main&apos; of https\://github.com/MyStraw/JSP&\#x0A;</message>\r\n<message>\uB0D0\uD558\uD558</message>\r\n<message>\uB0D0\uD558</message>\r\n<message>\uC62C\uB9AC\uAE30 \uD14C\uC2A4\uD2B8</message>\r\n<message>23</message>\r\n</messages>
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
 eclipse.preferences.version=1
 repositories_view_filters=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<FilterCache/>

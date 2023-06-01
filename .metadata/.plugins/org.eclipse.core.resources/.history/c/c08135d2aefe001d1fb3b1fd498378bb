@@ -1,0 +1,26 @@
+package fileupload;
+
+import common.JDBCConnect2;
+
+public class MyfileDAO extends JDBCConnect2 {
+	
+	public int insertFile(MyfileDTO dto) {
+	
+		int applyResult = 0;
+		try {
+		String query = "insert into myfile(idx, name, title, ate, ofile, sfile) values (seq_board_num.nextval, ?,?,?,?,?)";
+				
+				psmt = con.prepareStatement(query);
+				psmt.setString(1, dto.getName());
+				psmt.setString(2, dto.getTitle());
+				psmt.setString(3, dto.getCate());
+				psmt.setString(4, dto.getOfile());
+				psmt.setString(5, dto.getSfile());
+				
+				
+	}
+	}
+	
+	}
+
+}

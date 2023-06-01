@@ -24,15 +24,26 @@ if (sessionId.equals(dto.getId())) {  // 작성자가 본인인지 확인
     // 성공/실패 처리
     if (delResult == 1) { 
         // 성공 시 목록 페이지로 이동
+<<<<<<< HEAD
         JSFunction.alertLocation("삭제되었습니다.", "List.jsp", out); 
     } else {
         // 실패 시 이전 페이지로 이동
         JSFunction.alertBack("삭제에 실패하였습니다.", out);
+=======
+        JSFunction_과거.alertLocation("삭제되었습니다.", "List.jsp", out); 
+    } else {
+        // 실패 시 이전 페이지로 이동
+        JSFunction_과거.alertBack("삭제에 실패하였습니다.", out);
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
     } 
 } 
 else { 
     // 작성자 본인이 아니라면 이전 페이지로 이동
+<<<<<<< HEAD
     JSFunction.alertBack("본인만 삭제할 수 있습니다.", out);
+=======
+    JSFunction_과거.alertBack("본인만 삭제할 수 있습니다.", out);
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
 
     return;
 }

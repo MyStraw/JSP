@@ -1,0 +1,13 @@
+package servlet;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/13Servlet/LifeCycle.do")
+public class LifeCycle extends HttpServlet{
+	
+
+@PostConstruct
+public class LifeCycle extends  {
+	
+
+}

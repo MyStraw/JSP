@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%@page import="utils.JSFunction"%>
+=======
+<%@page import="utils.JSFunction_과거"%>
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
 <%@page import="java.io.FileNotFoundException"%>
 <%@page import="java.io.OutputStream"%>
 <%@page import="java.io.FileInputStream"%>
@@ -7,6 +11,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
 String saveDirectory = application.getRealPath("/Uploads");
 String saveFilename = request.getParameter("sName");
 String originalFilename = request.getParameter("oName");
@@ -43,10 +51,18 @@ try {
 	inStream.close();
 	outStream.close();
 } catch (FileNotFoundException e) {
+<<<<<<< HEAD
 	JSFunction.alertBack("파일을 찾을 수 없습니다.", out);
 
 } catch (Exception e) {
 	e.printStackTrace();
 	JSFunction.alertBack("예외가 발생하였습니다.", out);
+=======
+	JSFunction_과거.alertBack("파일을 찾을 수 없습니다.", out);
+
+} catch (Exception e) {
+	e.printStackTrace();
+	JSFunction_과거.alertBack("예외가 발생하였습니다.", out);
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
 }
 %>

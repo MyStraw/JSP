@@ -23,6 +23,10 @@ int iResult = dao.insertWrite(dto);
 if (iResult == 1) {
     response.sendRedirect("List.jsp");
 } else {
+<<<<<<< HEAD
     JSFunction.alertBack("글쓰기에 실패하였습니다.", out);
+=======
+    JSFunction_과거.alertBack("글쓰기에 실패하였습니다.", out);
+>>>>>>> 4244c777a6a4bd34b4ca1a2160dfd0820c9f8ffd
 }
 %>
