@@ -1,7 +1,0 @@
-package fileupload;
-
-import common.JDBCConnect2;
-
-public class MyfileDAO extends JDBCConnect2 {
-
-}
